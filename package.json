@@ -1,0 +1,34 @@
+{
+  "name": "ets",
+  "displayName": "ETS",
+  "description": "Ets",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "ets",
+        "aliases": [
+          "ets",
+          "ets"
+        ],
+        "extensions": [
+          ".ets"
+        ],
+        "configuration": "./ets-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "ets",
+        "scopeName": "source.ets",
+        "path": "./syntaxes/ets.tmLanguage.json"
+      }
+    ]
+  }
+}
