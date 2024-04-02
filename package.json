@@ -4,6 +4,7 @@
   "description": "ArkTs ets 语法高亮插件",
   "publisher": "kkaaddff",
   "version": "0.0.1",
+  "icon": "assets/nav_arkts.png",
   "engines": {
     "vscode": "^1.87.0"
   },
