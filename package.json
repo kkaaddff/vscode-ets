@@ -3,7 +3,7 @@
   "displayName": "ArkTs",
   "description": "ArkTs ets 语法高亮插件",
   "publisher": "kkaaddff",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "assets/nav_arkts.png",
   "engines": {
     "vscode": "^1.87.0"
@@ -14,7 +14,7 @@
   "contributes": {
     "languages": [
       {
-        "id": "ets",
+        "id": "arkts",
         "aliases": [
           "ArkTs",
           "ets"
@@ -27,7 +27,7 @@
     ],
     "grammars": [
       {
-        "language": "ets",
+        "language": "arkts",
         "scopeName": "source.ets",
         "path": "./syntaxes/ets.tmLanguage.json"
       }
