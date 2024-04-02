@@ -1,7 +1,8 @@
 {
-  "name": "ets",
-  "displayName": "ETS",
-  "description": "Ets",
+  "name": "arkts-ets",
+  "displayName": "ArkTs",
+  "description": "ArkTs ets 语法高亮插件",
+  "publisher": "kkaaddff",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.87.0"
@@ -14,13 +15,13 @@
       {
         "id": "ets",
         "aliases": [
-          "ets",
+          "ArkTs",
           "ets"
         ],
         "extensions": [
           ".ets"
         ],
-        "configuration": "./ets-configuration.json"
+        "configuration": "./syntaxes/ets-language-configuration.json"
       }
     ],
     "grammars": [
