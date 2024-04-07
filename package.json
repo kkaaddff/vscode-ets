@@ -3,8 +3,12 @@
   "displayName": "ArkTs",
   "description": "ArkTs ets 语法高亮插件",
   "publisher": "kkaaddff",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "icon": "assets/nav_arkts.png",
+  "repository": {
+    "type": "https",
+    "url": "https://github.com/kkaaddff/vscode-ets"
+  },
   "engines": {
     "vscode": "^1.87.0"
   },
