@@ -3,7 +3,7 @@
   "displayName": "ArkTs",
   "description": "ArkTs ets 语法高亮插件",
   "publisher": "kkaaddff",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "icon": "assets/nav_arkts.png",
   "repository": {
     "type": "https",

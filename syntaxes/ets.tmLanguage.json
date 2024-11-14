@@ -6,7 +6,6 @@
 
   "foldingStartMarker": "\\{\\s*$",
   "foldingStopMarker": "^\\s*\\}",
-
   "patterns": [
     {
       "name": "meta.preprocessor.script.dart",
@@ -20,7 +19,7 @@
           "name": "keyword.other.import.dart"
         }
       },
-      "end": ";",
+      "end": "(;|}|$)",
       "endCaptures": {
         "0": {
           "name": "punctuation.terminator.dart"
