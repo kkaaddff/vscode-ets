@@ -1,31 +1,35 @@
 {
-  "name": "ETS",
-  "version": "0.0.1",
+  "name": "ets",
+  "aliases": ["arkts"],
   "fileTypes": ["ets"],
+  "version": "0.0.1",
   "scopeName": "source.ets",
-
   "foldingStartMarker": "\\{\\s*$",
   "foldingStopMarker": "^\\s*\\}",
   "patterns": [
     {
-      "name": "meta.preprocessor.script.dart",
+      "name": "meta.preprocessor.script.ets",
       "match": "^(#!.*)$"
     },
     {
-      "name": "meta.declaration.dart",
-      "begin": "^\\w*\\b(library|import|part of|part|export)\\b",
+      "name": "meta.declaration.ets",
+      "begin": "^\\s*\\b(library|import|part of|part|export)\\b",
       "beginCaptures": {
         "0": {
-          "name": "keyword.other.import.dart"
+          "name": "keyword.other.import.ets"
         }
       },
-      "end": "(;|}|$)",
+      "end": "(;|$)",
       "endCaptures": {
         "0": {
-          "name": "punctuation.terminator.dart"
+          "name": "punctuation.terminator.ets"
         }
       },
       "patterns": [
+        {
+          "name": "keyword.other.import.ets",
+          "match": "\\b(as|show|hide|from)\\b"
+        },
         {
           "include": "#strings"
         },
@@ -33,11 +37,7 @@
           "include": "#comments"
         },
         {
-          "name": "keyword.other.import.dart",
-          "match": "\\b(as|show|hide)\\b"
-        },
-        {
-          "name": "keyword.control.dart",
+          "name": "keyword.control.ets",
           "match": "\\b(if)\\b"
         }
       ]
@@ -72,7 +72,7 @@
           "match": "(\\[.*?\\])",
           "captures": {
             "0": {
-              "name": "variable.name.source.dart"
+              "name": "variable.name.source.ets"
             }
           }
         },
@@ -80,12 +80,12 @@
           "match": "^ {4,}(?![ \\*]).*",
           "captures": {
             "0": {
-              "name": "variable.name.source.dart"
+              "name": "variable.name.source.ets"
             }
           }
         },
         {
-          "contentName": "variable.other.source.dart",
+          "contentName": "variable.other.source.ets",
           "begin": "```.*?$",
           "end": "```"
         },
@@ -93,7 +93,7 @@
           "match": "(`[^`]+?`)",
           "captures": {
             "0": {
-              "name": "variable.other.source.dart"
+              "name": "variable.other.source.ets"
             }
           }
         },
@@ -101,7 +101,7 @@
           "match": "(\\* ((    ).*))$",
           "captures": {
             "2": {
-              "name": "variable.other.source.dart"
+              "name": "variable.other.source.ets"
             }
           }
         }
@@ -110,11 +110,11 @@
     "comments": {
       "patterns": [
         {
-          "name": "comment.block.empty.dart",
+          "name": "comment.block.empty.ets",
           "match": "/\\*\\*/",
           "captures": {
             "0": {
-              "name": "punctuation.definition.comment.dart"
+              "name": "punctuation.definition.comment.ets"
             }
           }
         },
@@ -132,7 +132,7 @@
     "comments-doc-oldschool": {
       "patterns": [
         {
-          "name": "comment.block.documentation.dart",
+          "name": "comment.block.documentation.ets",
           "begin": "/\\*\\*",
           "end": "\\*/",
           "patterns": [
@@ -152,7 +152,7 @@
     "comments-doc": {
       "patterns": [
         {
-          "name": "comment.block.documentation.dart",
+          "name": "comment.block.documentation.ets",
           "begin": "///",
           "while": "^\\s*///",
           "patterns": [
@@ -172,7 +172,7 @@
           "match": "((//).*)$",
           "captures": {
             "1": {
-              "name": "comment.line.double-slash.dart"
+              "name": "comment.line.double-slash.ets"
             }
           }
         }
@@ -181,7 +181,7 @@
     "comments-block": {
       "patterns": [
         {
-          "name": "comment.block.dart",
+          "name": "comment.block.ets",
           "begin": "/\\*",
           "end": "\\*/",
           "patterns": [
@@ -195,7 +195,7 @@
     "annotations": {
       "patterns": [
         {
-          "name": "storage.type.annotation.dart",
+          "name": "storage.type.annotation.ets",
           "match": "@[a-zA-Z]+"
         }
       ]
@@ -203,15 +203,15 @@
     "constants-and-special-vars": {
       "patterns": [
         {
-          "name": "constant.language.dart",
+          "name": "constant.language.ets",
           "match": "(?<!\\$)\\b(true|false|null)\\b(?!\\$)"
         },
         {
-          "name": "variable.language.dart",
+          "name": "variable.language.ets",
           "match": "(?<!\\$)\\b(this|super)\\b(?!\\$)"
         },
         {
-          "name": "constant.numeric.dart",
+          "name": "constant.numeric.ets",
           "match": "(?<!\\$)\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b(?!\\$)"
         },
         {
@@ -226,18 +226,18 @@
       "patterns": [
         {
           "match": "(?<!\\$)\\b(bool|num|int|double|dynamic)\\b(?!\\$)",
-          "name": "support.class.dart"
+          "name": "support.class.ets"
         },
         {
           "match": "(?<!\\$)\\bvoid\\b(?!\\$)",
-          "name": "storage.type.primitive.dart"
+          "name": "storage.type.primitive.ets"
         },
         {
           "begin": "(?<![a-zA-Z0-9_$])([_$]*[A-Z][a-zA-Z0-9_$]*)\\b",
           "end": "(?!<)",
           "beginCaptures": {
             "1": {
-              "name": "support.class.dart"
+              "name": "support.class.ets"
             }
           },
           "patterns": [
@@ -254,7 +254,7 @@
           "match": "([_$]*[a-z][a-zA-Z0-9_$]*)(<(?:[a-zA-Z0-9_$<>?]|,\\s*|\\s+extends\\s+)+>)?[!?]?\\(",
           "captures": {
             "1": {
-              "name": "entity.name.function.dart"
+              "name": "entity.name.function.ets"
             },
             "2": {
               "patterns": [
@@ -272,12 +272,12 @@
       "end": "(>)",
       "beginCaptures": {
         "1": {
-          "name": "other.source.dart"
+          "name": "other.source.ets"
         }
       },
       "endCaptures": {
         "1": {
-          "name": "other.source.dart"
+          "name": "other.source.ets"
         }
       },
       "patterns": [
@@ -288,7 +288,7 @@
           "match": ","
         },
         {
-          "name": "keyword.declaration.dart",
+          "name": "keyword.declaration.ets",
           "match": "extends"
         },
         {
@@ -299,43 +299,43 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.cast.dart",
+          "name": "keyword.cast.ets",
           "match": "(?<!\\$)\\bas\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.catch-exception.dart",
+          "name": "keyword.control.catch-exception.ets",
           "match": "(?<!\\$)\\b(try|on|catch|finally|throw|rethrow)\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.dart",
+          "name": "keyword.control.ets",
           "match": "(?<!\\$)\\b(break|case|continue|default|do|else|for|if|in|switch|while|when)\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.dart",
+          "name": "keyword.control.ets",
           "match": "(?<!\\$)\\b(sync(\\*)?|async(\\*)?|await|yield(\\*)?)\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.dart",
+          "name": "keyword.control.ets",
           "match": "(?<!\\$)\\bassert\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.new.dart",
+          "name": "keyword.control.new.ets",
           "match": "(?<!\\$)\\b(new)\\b(?!\\$)"
         },
         {
-          "name": "keyword.control.return.dart",
+          "name": "keyword.control.return.ets",
           "match": "(?<!\\$)\\b(return)\\b(?!\\$)"
         },
         {
-          "name": "keyword.declaration.dart",
-          "match": "(?<!\\$)\\b(abstract|sealed|base|interface|class|enum|extends|extension type|extension|external|factory|implements|get(?![(<])|mixin|native|operator|set(?![(<])|typedef|with|covariant)\\b(?!\\$)"
+          "name": "keyword.declaration.ets",
+          "match": "(?<!\\$)\\b(abstract|sealed|base|interface|class|struct|enum|extends|extension type|extension|external|factory|implements|get(?![(<])|mixin|native|operator|set(?![(<])|typedef|with|covariant)\\b(?!\\$)"
         },
         {
-          "name": "storage.modifier.dart",
-          "match": "(?<!\\$)\\b(static|final|const|required|late)\\b(?!\\$)"
+          "name": "storage.modifier.ets",
+          "match": "(?<!\\$)\\b(static|final|const|required|late|private|public|protected)\\b(?!\\$)"
         },
         {
-          "name": "storage.type.primitive.dart",
+          "name": "storage.type.primitive.ets",
           "match": "(?<!\\$)\\b(?:void|var)\\b(?!\\$)"
         }
       ]
@@ -343,47 +343,47 @@
     "operators": {
       "patterns": [
         {
-          "name": "keyword.operator.dart",
+          "name": "keyword.operator.ets",
           "match": "(?<!\\$)\\b(is\\!?)\\b(?!\\$)"
         },
         {
-          "name": "keyword.operator.ternary.dart",
+          "name": "keyword.operator.ternary.ets",
           "match": "\\?|:"
         },
         {
-          "name": "keyword.operator.bitwise.dart",
+          "name": "keyword.operator.bitwise.ets",
           "match": "(<<|>>>?|~|\\^|\\||&)"
         },
         {
-          "name": "keyword.operator.assignment.bitwise.dart",
+          "name": "keyword.operator.assignment.bitwise.ets",
           "match": "((&|\\^|\\||<<|>>>?)=)"
         },
         {
-          "name": "keyword.operator.closure.dart",
+          "name": "keyword.operator.closure.ets",
           "match": "(=>)"
         },
         {
-          "name": "keyword.operator.comparison.dart",
+          "name": "keyword.operator.comparison.ets",
           "match": "(==|!=|<=?|>=?)"
         },
         {
-          "name": "keyword.operator.assignment.arithmetic.dart",
+          "name": "keyword.operator.assignment.arithmetic.ets",
           "match": "(([+*/%-]|\\~)=)"
         },
         {
-          "name": "keyword.operator.assignment.dart",
+          "name": "keyword.operator.assignment.ets",
           "match": "(=)"
         },
         {
-          "name": "keyword.operator.increment-decrement.dart",
+          "name": "keyword.operator.increment-decrement.ets",
           "match": "(\\-\\-|\\+\\+)"
         },
         {
-          "name": "keyword.operator.arithmetic.dart",
+          "name": "keyword.operator.arithmetic.ets",
           "match": "(\\-|\\+|\\*|\\/|\\~\\/|%)"
         },
         {
-          "name": "keyword.operator.logical.dart",
+          "name": "keyword.operator.logical.ets",
           "match": "(!|&&|\\|\\|)"
         }
       ]
@@ -391,16 +391,16 @@
     "string-interp": {
       "patterns": [
         {
-          "name": "string.interpolated.expression.dart",
+          "name": "string.interpolated.expression.ets",
           "match": "\\$([a-zA-Z0-9_]+)",
           "captures": {
             "1": {
-              "name": "variable.parameter.dart"
+              "name": "variable.parameter.ets"
             }
           }
         },
         {
-          "name": "string.interpolated.expression.dart",
+          "name": "string.interpolated.expression.ets",
           "begin": "\\$\\{",
           "end": "\\}",
           "patterns": [
@@ -411,13 +411,13 @@
               "include": "#strings"
             },
             {
-              "name": "variable.parameter.dart",
+              "name": "variable.parameter.ets",
               "match": "[a-zA-Z0-9_]+"
             }
           ]
         },
         {
-          "name": "constant.character.escape.dart",
+          "name": "constant.character.escape.ets",
           "match": "\\\\."
         }
       ]
@@ -425,7 +425,7 @@
     "strings": {
       "patterns": [
         {
-          "name": "string.interpolated.triple.double.dart",
+          "name": "string.interpolated.triple.double.ets",
           "begin": "(?<!r)\"\"\"",
           "end": "\"\"\"(?!\")",
           "patterns": [
@@ -435,7 +435,7 @@
           ]
         },
         {
-          "name": "string.interpolated.triple.single.dart",
+          "name": "string.interpolated.triple.single.ets",
           "begin": "(?<!r)'''",
           "end": "'''(?!')",
           "patterns": [
@@ -445,17 +445,17 @@
           ]
         },
         {
-          "name": "string.quoted.triple.double.dart",
+          "name": "string.quoted.triple.double.ets",
           "begin": "r\"\"\"",
           "end": "\"\"\"(?!\")"
         },
         {
-          "name": "string.quoted.triple.single.dart",
+          "name": "string.quoted.triple.single.ets",
           "begin": "r'''",
           "end": "'''(?!')"
         },
         {
-          "name": "string.interpolated.double.dart",
+          "name": "string.interpolated.double.ets",
           "begin": "(?<!\\|r)\"",
           "end": "\"",
           "patterns": [
@@ -469,7 +469,7 @@
           ]
         },
         {
-          "name": "string.quoted.double.dart",
+          "name": "string.quoted.double.ets",
           "begin": "r\"",
           "end": "\"",
           "patterns": [
@@ -480,7 +480,7 @@
           ]
         },
         {
-          "name": "string.interpolated.single.dart",
+          "name": "string.interpolated.single.ets",
           "begin": "(?<!\\|r)'",
           "end": "'",
           "patterns": [
@@ -494,7 +494,7 @@
           ]
         },
         {
-          "name": "string.quoted.single.dart",
+          "name": "string.quoted.single.ets",
           "begin": "r'",
           "end": "'",
           "patterns": [
@@ -509,15 +509,15 @@
     "punctuation": {
       "patterns": [
         {
-          "name": "punctuation.comma.dart",
+          "name": "punctuation.comma.ets",
           "match": ","
         },
         {
-          "name": "punctuation.terminator.dart",
+          "name": "punctuation.terminator.ets",
           "match": ";"
         },
         {
-          "name": "punctuation.dot.dart",
+          "name": "punctuation.dot.ets",
           "match": "\\."
         }
       ]
