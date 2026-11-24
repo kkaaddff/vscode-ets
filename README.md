@@ -176,7 +176,7 @@ ArkTS 的 8 位十六进制颜色是 **`#AARRGGBB`（透明度在前）**，与 
 ## 安装
 
 - **扩展市场**：在 VS Code 扩展视图中搜索 `ArkTS`（发布者 `kkaaddff`）；
-- **手动安装**：从 [Releases](https://github.com/kkaaddff/vscode-ets/releases) 下载（或按下文「开发」一节自行 `npm run package` 构建）`.vsix`，执行 `code --install-extension arkts-ets-1.0.0.vsix`，或在扩展视图右上角 `…` → 「从 VSIX 安装」。
+- **手动安装**：从 [Releases](https://github.com/kkaaddff/vscode-ets/releases) 下载（或按下文「开发」一节自行 `npm run package` 构建）`.vsix`，执行 `code --install-extension arkts-ets-1.0.1.vsix`，或在扩展视图右上角 `…` → 「从 VSIX 安装」。
 
 要求 VS Code 1.87 或更高版本。扩展在打开 `.ets` 文件时激活，所有功能在本地运行，不联网、不需要 HarmonyOS SDK。
 

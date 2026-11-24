@@ -2,7 +2,7 @@
   "name": "arkts-ets",
   "displayName": "ArkTS",
   "description": "ArkTS（HarmonyOS / OpenHarmony .ets）语言支持：精准语法高亮、组件大纲、格式化、装饰器与组件补全、$r 资源补全/跳转/校验、ARGB 颜色选择器、代码片段",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "kkaaddff",
   "license": "MIT",
   "icon": "assets/icon.png",
