@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "publisher": "kkaaddff",
   "license": "MIT",
-  "icon": "assets/nav_arkts.png",
+  "icon": "assets/icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/kkaaddff/vscode-ets"
@@ -53,8 +53,8 @@
           ".ets"
         ],
         "icon": {
-          "light": "./assets/nav_arkts.png",
-          "dark": "./assets/nav_arkts.png"
+          "light": "./assets/file-icon.svg",
+          "dark": "./assets/file-icon.svg"
         },
         "configuration": "./language-configuration.json"
       }
@@ -157,9 +157,10 @@
     }
   },
   "scripts": {
-    "vscode:prepublish": "npm run build:grammar && npm run build -- --production",
+    "vscode:prepublish": "npm run build:icon && npm run build:grammar && npm run build -- --production",
     "build": "node scripts/build.mjs",
     "build:grammar": "node scripts/build-grammar.mjs",
+    "build:icon": "node scripts/build-icon.mjs",
     "watch": "node scripts/build.mjs --watch",
     "typecheck": "tsc -p .",
     "test": "npm run test:grammar && npm run test:unit",
@@ -169,6 +170,7 @@
     "package": "vsce package --no-dependencies"
   },
   "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "@types/node": "^20.19.43",
     "@types/vscode": "~1.87.0",
     "@vscode/test-electron": "^3.1.0",

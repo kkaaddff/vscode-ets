@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="assets/nav_arkts.png" width="96" alt="ArkTS">
-</p>
-
 <h1 align="center">ArkTS for VS Code</h1>
 
 <p align="center">
@@ -227,6 +223,7 @@ npm run watch             # 监听模式
 npm run typecheck         # 类型检查
 npm test                  # 语法测试 + 单元测试
 npm run test:integration  # 在独立下载的 VS Code 中运行集成测试
+npm run build:icon        # 由 assets/icon.svg 生成市场图标 PNG（打包时自动执行）
 npm run package           # 生成 .vsix
 ```
 

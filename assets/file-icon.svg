@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- 资源管理器中 .ets 文件的图标：透明背景、加粗线条，保证 16px 下清晰 -->
+  <defs>
+    <linearGradient id="ink" x1="56" y1="224" x2="200" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1F4FFF"/>
+      <stop offset="1" stop-color="#14B8FF"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#ink)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 222 L128 34 L200 222" stroke-width="40"/>
+    <path d="M20 196 C 72 132, 172 94, 238 94" stroke-width="26"/>
+  </g>
+</svg>

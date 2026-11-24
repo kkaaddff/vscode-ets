@@ -102,8 +102,8 @@ test('跳转到资源定义', async () => {
   const files = links.map((l) => (l.targetUri ?? l.uri).fsPath).sort();
   assert.equal(files.length, 2, '应跳转到 base 与 zh_CN 两处');
   assert.ok(files.every((f) => f.endsWith(path.join('element', 'string.json'))));
-  const raw = await vscode.commands.executeCommand('vscode.executeDefinitionProvider', doc.uri, pos('img/logo.png', 2));
-  assert.ok((raw[0].targetUri ?? raw[0].uri).fsPath.endsWith(path.join('rawfile', 'img', 'logo.png')));
+  const raw = await vscode.commands.executeCommand('vscode.executeDefinitionProvider', doc.uri, pos('img/logo.svg', 2));
+  assert.ok((raw[0].targetUri ?? raw[0].uri).fsPath.endsWith(path.join('rawfile', 'img', 'logo.svg')));
 });
 
 test('不存在的资源产生警告', async () => {

@@ -84,7 +84,7 @@
 #                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
 #                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
 #                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
->      Image($rawfile('img/logo.png'))
+>      Image($rawfile('img/logo.svg'))
 #^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
 #      ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
 #           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets

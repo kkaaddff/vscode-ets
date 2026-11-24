@@ -4,3 +4,6 @@ out
 *.vsix
 .vscode-test
 .DS_Store
+
+# 由 assets/icon.svg 在打包时生成（npm run build:icon）
+assets/icon.png

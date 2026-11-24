@@ -9,7 +9,7 @@ struct Index {
         .fontColor($r('app.color.primary'))
         .backgroundColor('#80FF0000')
       Image($r('app.media.icon'))
-      Image($rawfile('img/logo.png'))
+      Image($rawfile('img/logo.svg'))
       Text($r('app.string.missing'))
       Image($rawfile('nope.png'))
     }

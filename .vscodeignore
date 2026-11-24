@@ -5,7 +5,8 @@
 !LICENSE
 !ThirdPartyNotices.txt
 !language-configuration.json
-!assets/nav_arkts.png
+!assets/icon.png
+!assets/file-icon.svg
 !dist/extension.js
 !syntaxes/*.json
 !snippets/*.json

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#EEF2F8"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="68" y1="204" x2="188" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1F4FFF"/>
+      <stop offset="1" stop-color="#14B8FF"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="40" y1="182" x2="224" y2="92" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14B8FF" stop-opacity="0.45"/>
+      <stop offset="0.45" stop-color="#14B8FF"/>
+      <stop offset="1" stop-color="#1F4FFF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 圆角底板 -->
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#bg)"/>
+  <rect x="8.5" y="8.5" width="239" height="239" rx="55.5" fill="none" stroke="#000" stroke-opacity="0.06"/>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 左腿 -->
+    <path d="M128 48 L68 204" stroke="url(#ink)" stroke-width="26"/>
+    <!-- 环绕弧线：压在左腿之上 -->
+    <path d="M40 182 C 84 128, 168 92, 224 92" stroke="#F7F9FC" stroke-width="30"/>
+    <path d="M40 182 C 84 128, 168 92, 224 92" stroke="url(#orbit)" stroke-width="16"/>
+    <!-- 右腿：从弧线之上穿过 -->
+    <path d="M143 87 L160 131" stroke="#F7F9FC" stroke-width="40" stroke-linecap="butt"/>
+    <path d="M128 48 L188 204" stroke="url(#ink)" stroke-width="26"/>
+  </g>
+</svg>
