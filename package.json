@@ -1,40 +1,185 @@
 {
   "name": "arkts-ets",
-  "displayName": "ArkTs",
-  "description": "ArkTs ets 语法高亮插件",
+  "displayName": "ArkTS",
+  "description": "ArkTS（HarmonyOS / OpenHarmony .ets）语言支持：精准语法高亮、组件大纲、格式化、装饰器与组件补全、$r 资源补全/跳转/校验、ARGB 颜色选择器、代码片段",
+  "version": "1.0.1",
   "publisher": "kkaaddff",
-  "version": "0.0.4",
-  "icon": "assets/nav_arkts.png",
+  "license": "MIT",
+  "icon": "assets/icon.png",
   "repository": {
-    "type": "https",
+    "type": "git",
     "url": "https://github.com/kkaaddff/vscode-ets"
   },
+  "bugs": {
+    "url": "https://github.com/kkaaddff/vscode-ets/issues"
+  },
+  "homepage": "https://github.com/kkaaddff/vscode-ets#readme",
   "engines": {
     "vscode": "^1.87.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets",
+    "Formatters"
   ],
+  "keywords": [
+    "arkts",
+    "ets",
+    "harmonyos",
+    "openharmony",
+    "鸿蒙",
+    "arkui"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": "limited",
+      "description": "虚拟工作区中资源索引依赖文件系统提供者，可能不完整。"
+    }
+  },
   "contributes": {
     "languages": [
       {
         "id": "arkts",
         "aliases": [
-          "ArkTs",
+          "ArkTS",
           "ets"
         ],
         "extensions": [
           ".ets"
         ],
-        "configuration": "./syntaxes/ets-language-configuration.json"
+        "icon": {
+          "light": "./assets/file-icon.svg",
+          "dark": "./assets/file-icon.svg"
+        },
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "arkts",
         "scopeName": "source.ets",
-        "path": "./syntaxes/ets.tmLanguage.json"
+        "path": "./syntaxes/arkts.tmLanguage.json",
+        "tokenTypes": {
+          "meta.template.expression": "other",
+          "meta.template.expression string": "string",
+          "meta.template.expression comment": "comment",
+          "entity.name.type.instance.jsdoc": "other",
+          "entity.name.function.tagged-template": "other",
+          "meta.import string.quoted": "other",
+          "variable.other.jsdoc": "other"
+        }
+      },
+      {
+        "scopeName": "markdown.arkts.codeblock",
+        "path": "./syntaxes/arkts.markdown.tmLanguage.json",
+        "injectTo": [
+          "text.html.markdown"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.arkts": "arkts"
+        }
       }
-    ]
+    ],
+    "snippets": [
+      {
+        "language": "arkts",
+        "path": "./snippets/arkts.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "arkts.refreshResources",
+        "title": "重新索引资源文件",
+        "category": "ArkTS"
+      }
+    ],
+    "configuration": {
+      "title": "ArkTS",
+      "properties": {
+        "arkts.format.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "启用 ArkTS 格式化（基于 TypeScript 格式化引擎，并按 ArkUI 习惯对齐属性链）。"
+        },
+        "arkts.format.semicolons": {
+          "type": "string",
+          "enum": [
+            "ignore",
+            "insert",
+            "remove"
+          ],
+          "enumDescriptions": [
+            "保持原样",
+            "在语句末尾补充分号（不会影响尾随闭包）",
+            "删除不必要的分号"
+          ],
+          "default": "ignore",
+          "description": "格式化时如何处理语句末尾的分号。"
+        },
+        "arkts.format.insertSpaceInEmptyBraces": {
+          "type": "boolean",
+          "default": false,
+          "description": "格式化时在空大括号中插入空格：`() => { }`。"
+        },
+        "arkts.outline.showComponentTree": {
+          "type": "boolean",
+          "default": true,
+          "description": "在大纲 / 面包屑中展示 build() 与 @Builder 中的 UI 组件树。"
+        },
+        "arkts.completion.components": {
+          "type": "boolean",
+          "default": true,
+          "description": "在语句开头输入大写字母时提示内置组件与渲染控制语法。"
+        },
+        "arkts.diagnostics.resources": {
+          "type": "boolean",
+          "default": true,
+          "description": "检查 $r() / $rawfile() 引用的资源是否存在。"
+        },
+        "arkts.colorDecorators": {
+          "type": "boolean",
+          "default": true,
+          "description": "为颜色字符串（#ARGB / #AARRGGBB）、Color 枚举、颜色资源显示色块与颜色选择器。"
+        }
+      }
+    },
+    "configurationDefaults": {
+      "[arkts]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "editor.defaultFormatter": "kkaaddff.arkts-ets"
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build:icon && npm run build:grammar && npm run build -- --production",
+    "build": "node scripts/build.mjs",
+    "build:grammar": "node scripts/build-grammar.mjs",
+    "build:icon": "node scripts/build-icon.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "typecheck": "tsc -p .",
+    "test": "npm run test:grammar && npm run test:unit",
+    "test:grammar": "node scripts/build-grammar.mjs --check && vscode-tmgrammar-test -g syntaxes/arkts.tmLanguage.json \"test/grammar/*.ets\" && vscode-tmgrammar-snap -g syntaxes/arkts.tmLanguage.json \"test/fixtures/**/*.ets\"",
+    "test:unit": "node scripts/build.mjs --tests && node --test out/test/",
+    "test:integration": "node scripts/build.mjs && node test/integration/runTest.mjs",
+    "package": "vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "^20.19.43",
+    "@types/vscode": "~1.87.0",
+    "@vscode/test-electron": "^3.1.0",
+    "@vscode/vsce": "^4.1.1",
+    "esbuild": "^0.28.2",
+    "jsonc-parser": "^3.3.1",
+    "typescript": "^5.9.3",
+    "vscode-oniguruma": "^1.7.0",
+    "vscode-textmate": "^7.0.4",
+    "vscode-tmgrammar-test": "^0.1.3"
   }
 }

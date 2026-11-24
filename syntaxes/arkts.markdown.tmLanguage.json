@@ -1,0 +1,30 @@
+{
+  "information_for_contributors": "让 Markdown 中 ```arkts / ```ets 代码块获得 ArkTS 语法高亮。",
+  "fileTypes": [],
+  "injectionSelector": "L:text.html.markdown",
+  "scopeName": "markdown.arkts.codeblock",
+  "patterns": [{ "include": "#arkts-code-block" }],
+  "repository": {
+    "arkts-code-block": {
+      "name": "markup.fenced_code.block.markdown",
+      "begin": "(^|\\G)(\\s*)(`{3,}|~{3,})\\s*(?i:(arkts|ets)((\\s+|:|,|\\{|\\?)[^`]*)?$)",
+      "beginCaptures": {
+        "3": { "name": "punctuation.definition.markdown" },
+        "4": { "name": "fenced_code.block.language.markdown" },
+        "5": { "name": "fenced_code.block.language.attributes.markdown" }
+      },
+      "end": "(^|\\G)(\\2|\\s{0,3})(\\3)\\s*$",
+      "endCaptures": {
+        "3": { "name": "punctuation.definition.markdown" }
+      },
+      "patterns": [
+        {
+          "begin": "(^|\\G)(\\s*)(.*)",
+          "while": "(^|\\G)(?!\\s*([`~]{3,})\\s*$)",
+          "contentName": "meta.embedded.block.arkts",
+          "patterns": [{ "include": "source.ets" }]
+        }
+      ]
+    }
+  }
+}
