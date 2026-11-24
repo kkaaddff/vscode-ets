@@ -1,0 +1,865 @@
+>import { router } from '@kit.ArkUI';
+#^^^^^^ source.ets meta.import.ets keyword.control.import.ets
+#      ^ source.ets meta.import.ets
+#       ^ source.ets meta.import.ets meta.block.ets punctuation.definition.block.ets
+#        ^ source.ets meta.import.ets meta.block.ets
+#         ^^^^^^ source.ets meta.import.ets meta.block.ets variable.other.readwrite.alias.ets
+#               ^ source.ets meta.import.ets meta.block.ets
+#                ^ source.ets meta.import.ets meta.block.ets punctuation.definition.block.ets
+#                 ^ source.ets meta.import.ets
+#                  ^^^^ source.ets meta.import.ets keyword.control.from.ets
+#                      ^ source.ets meta.import.ets
+#                       ^ source.ets meta.import.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                        ^^^^^^^^^^ source.ets meta.import.ets string.quoted.single.ets
+#                                  ^ source.ets meta.import.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                   ^ source.ets punctuation.terminator.statement.ets
+>import hilog from '@ohos.hilog';
+#^^^^^^ source.ets meta.import.ets keyword.control.import.ets
+#      ^ source.ets meta.import.ets
+#       ^^^^^ source.ets meta.import.ets variable.other.readwrite.alias.ets
+#            ^ source.ets meta.import.ets
+#             ^^^^ source.ets meta.import.ets keyword.control.from.ets
+#                 ^ source.ets meta.import.ets
+#                  ^ source.ets meta.import.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                   ^^^^^^^^^^^ source.ets meta.import.ets string.quoted.single.ets
+#                              ^ source.ets meta.import.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                               ^ source.ets punctuation.terminator.statement.ets
+>
+>@Observed
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>class Task {
+#^^^^^ source.ets meta.class.ets storage.type.class.ets
+#     ^ source.ets meta.class.ets
+#      ^^^^ source.ets meta.class.ets entity.name.type.class.ets
+#          ^ source.ets meta.class.ets
+#           ^ source.ets meta.class.ets punctuation.definition.block.ets
+>  name: string = '';
+#^^ source.ets meta.class.ets meta.field.declaration.ets
+#  ^^^^ source.ets meta.class.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#      ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#       ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets
+#        ^^^^^^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#              ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets
+#               ^ source.ets meta.class.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                ^ source.ets meta.class.ets meta.field.declaration.ets
+#                 ^ source.ets meta.class.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                  ^ source.ets meta.class.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                   ^ source.ets meta.class.ets punctuation.terminator.statement.ets
+>  done: boolean = false;
+#^^ source.ets meta.class.ets meta.field.declaration.ets
+#  ^^^^ source.ets meta.class.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#      ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#       ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets
+#        ^^^^^^^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#               ^ source.ets meta.class.ets meta.field.declaration.ets meta.type.annotation.ets
+#                ^ source.ets meta.class.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                 ^ source.ets meta.class.ets meta.field.declaration.ets
+#                  ^^^^^ source.ets meta.class.ets meta.field.declaration.ets constant.language.boolean.false.ets
+#                       ^ source.ets meta.class.ets punctuation.terminator.statement.ets
+>}
+#^ source.ets meta.class.ets punctuation.definition.block.ets
+>
+>@Extend(Text)
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+#       ^ source.ets meta.decorator.ets meta.brace.round.ets
+#        ^^^^ source.ets meta.decorator.ets support.class.component.arkts.ets
+#            ^ source.ets meta.decorator.ets meta.brace.round.ets
+>function fancy(size: number) {
+#^^^^^^^^ source.ets meta.function.ets storage.type.function.ets
+#        ^ source.ets meta.function.ets
+#         ^^^^^ source.ets meta.function.ets meta.definition.function.ets entity.name.function.ets
+#              ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#               ^^^^ source.ets meta.function.ets meta.parameters.ets variable.parameter.ets
+#                   ^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                    ^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets
+#                     ^^^^^^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets support.type.primitive.ets
+#                           ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                            ^ source.ets meta.function.ets
+#                             ^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>  .fontSize(size)
+#^^ source.ets meta.function.ets meta.block.ets
+#  ^ source.ets meta.function.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#   ^^^^^^^^ source.ets meta.function.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#           ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#            ^^^^ source.ets meta.function.ets meta.block.ets variable.other.readwrite.ets
+#                ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+>  .fontColor(Color.Red)
+#^^ source.ets meta.function.ets meta.block.ets
+#  ^ source.ets meta.function.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#   ^^^^^^^^^ source.ets meta.function.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#            ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#             ^^^^^ source.ets meta.function.ets meta.block.ets variable.other.object.ets
+#                  ^ source.ets meta.function.ets meta.block.ets punctuation.accessor.ets
+#                   ^^^ source.ets meta.function.ets meta.block.ets variable.other.property.ets
+#                      ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+>}
+#^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>
+>@Styles
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>function pressed() {
+#^^^^^^^^ source.ets meta.function.ets storage.type.function.ets
+#        ^ source.ets meta.function.ets
+#         ^^^^^^^ source.ets meta.function.ets meta.definition.function.ets entity.name.function.ets
+#                ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                 ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                  ^ source.ets meta.function.ets
+#                   ^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>  .backgroundColor('#33000000')
+#^^ source.ets meta.function.ets meta.block.ets
+#  ^ source.ets meta.function.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#   ^^^^^^^^^^^^^^^ source.ets meta.function.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                  ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#                   ^ source.ets meta.function.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                    ^^^^^^^^^ source.ets meta.function.ets meta.block.ets string.quoted.single.ets
+#                             ^ source.ets meta.function.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                              ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+>}
+#^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>
+>@Builder
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>function Header(title: string) {
+#^^^^^^^^ source.ets meta.function.ets storage.type.function.ets
+#        ^ source.ets meta.function.ets
+#         ^^^^^^ source.ets meta.function.ets meta.definition.function.ets entity.name.function.ets
+#               ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                ^^^^^ source.ets meta.function.ets meta.parameters.ets variable.parameter.ets
+#                     ^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                      ^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets
+#                       ^^^^^^ source.ets meta.function.ets meta.parameters.ets meta.type.annotation.ets support.type.primitive.ets
+#                             ^ source.ets meta.function.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                              ^ source.ets meta.function.ets
+#                               ^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>  Text(title).fontWeight(FontWeight.Bold)
+#^^ source.ets meta.function.ets meta.block.ets
+#  ^^^^ source.ets meta.function.ets meta.block.ets support.class.component.arkts.ets
+#      ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#       ^^^^^ source.ets meta.function.ets meta.block.ets variable.other.readwrite.ets
+#            ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#             ^ source.ets meta.function.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#              ^^^^^^^^^^ source.ets meta.function.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                        ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+#                         ^^^^^^^^^^ source.ets meta.function.ets meta.block.ets variable.other.object.ets
+#                                   ^ source.ets meta.function.ets meta.block.ets punctuation.accessor.ets
+#                                    ^^^^ source.ets meta.function.ets meta.block.ets variable.other.property.ets
+#                                        ^ source.ets meta.function.ets meta.block.ets meta.brace.round.ets
+>}
+#^ source.ets meta.function.ets meta.block.ets punctuation.definition.block.ets
+>
+>@Entry
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>@Component
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>export struct Index {
+#^^^^^^ source.ets meta.struct.ets keyword.control.export.ets
+#      ^ source.ets meta.struct.ets
+#       ^^^^^^ source.ets meta.struct.ets storage.type.struct.ets
+#             ^ source.ets meta.struct.ets
+#              ^^^^^ source.ets meta.struct.ets entity.name.type.class.ets
+#                   ^ source.ets meta.struct.ets
+#                    ^ source.ets meta.struct.ets punctuation.definition.block.ets
+>  @State message: string = 'Hello World';
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#        ^ source.ets meta.struct.ets meta.field.declaration.ets
+#         ^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                 ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                  ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                        ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                         ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                          ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                           ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                            ^^^^^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets
+#                                       ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                        ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @State tasks: Task[] = [];
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#        ^ source.ets meta.struct.ets meta.field.declaration.ets
+#         ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#               ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                ^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets entity.name.type.ets
+#                    ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.tuple.ets meta.brace.square.ets
+#                     ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.tuple.ets meta.brace.square.ets
+#                      ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                       ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                        ^ source.ets meta.struct.ets meta.field.declaration.ets meta.array.literal.ets
+#                         ^ source.ets meta.struct.ets meta.field.declaration.ets meta.array.literal.ets meta.brace.square.ets
+#                          ^ source.ets meta.struct.ets meta.field.declaration.ets meta.array.literal.ets meta.brace.square.ets
+#                           ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @Prop @Watch('onCountChange') count: number = 0;
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#       ^ source.ets meta.struct.ets
+#        ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#         ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#              ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+#               ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                ^^^^^^^^^^^^^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets
+#                             ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                              ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+#                               ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                                ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                                     ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                                      ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                                       ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                                             ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                                              ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                                               ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                                                ^ source.ets meta.struct.ets meta.field.declaration.ets constant.numeric.decimal.ets
+#                                                 ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @Link selected: boolean;
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#       ^ source.ets meta.struct.ets meta.field.declaration.ets
+#        ^^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                 ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                  ^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                         ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @StorageLink('theme') theme: string = 'light';
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^^^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#              ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+#               ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                ^^^^^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets
+#                     ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                      ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+#                       ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                        ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                             ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                               ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                                     ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                                      ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                                       ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                                        ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                                         ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets
+#                                              ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                               ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @BuilderParam content: () => void = Header;
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^^^^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#               ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                ^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets entity.name.function.ets
+#                       ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                        ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                         ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                          ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                           ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                            ^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets storage.type.function.arrow.ets
+#                              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets
+#                               ^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets support.type.primitive.ets
+#                                   ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets
+#                                    ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                                     ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                                      ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets variable.other.readwrite.ets
+#                                            ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  private scroller: Scroller = new Scroller();
+#^^ source.ets meta.struct.ets
+#  ^^^^^^^ source.ets meta.struct.ets storage.modifier.ets
+#         ^ source.ets meta.struct.ets meta.field.declaration.ets
+#          ^^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                  ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                   ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                    ^^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets entity.name.type.ets
+#                            ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                             ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                              ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                               ^^^ source.ets meta.struct.ets meta.field.declaration.ets new.expr.ets keyword.operator.new.ets
+#                                  ^ source.ets meta.struct.ets meta.field.declaration.ets new.expr.ets
+#                                   ^^^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets new.expr.ets meta.function-call.ets entity.name.function.ets
+#                                           ^ source.ets meta.struct.ets meta.field.declaration.ets new.expr.ets meta.brace.round.ets
+#                                            ^ source.ets meta.struct.ets meta.field.declaration.ets new.expr.ets meta.brace.round.ets
+#                                             ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>
+>  aboutToAppear(): void {
+#^^ source.ets meta.struct.ets meta.method.declaration.ets
+#  ^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets keyword.operator.type.annotation.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                   ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets support.type.primitive.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    hilog.info(0x0000, 'Index', `count = ${this.count}`);
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets variable.other.object.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#          ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#               ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets constant.numeric.hex.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.separator.comma.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                        ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets
+#                             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.separator.comma.ets
+#                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.begin.ets
+#                                 ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets
+#                                         ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.begin.ets
+#                                           ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.language.this.ets
+#                                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets punctuation.accessor.ets
+#                                                ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.other.property.ets
+#                                                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.end.ets
+#                                                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.end.ets
+#                                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.terminator.statement.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>
+>  onCountChange(): void {
+#^^ source.ets meta.struct.ets meta.method.declaration.ets
+#  ^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets keyword.operator.type.annotation.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                   ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets support.type.primitive.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    this.message = `${this.count}`;
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets variable.language.this.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.accessor.ets
+#         ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets variable.other.property.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets keyword.operator.assignment.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.begin.ets
+#                    ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.begin.ets
+#                      ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.language.this.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets punctuation.accessor.ets
+#                           ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.other.property.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.end.ets
+#                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.end.ets
+#                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.terminator.statement.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>
+>  build() {
+#^^ source.ets meta.struct.ets meta.method.declaration.ets
+#  ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    Column({ space: 12 }) {
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets support.class.component.arkts.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets
+#             ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                    ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets constant.numeric.decimal.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>      Header('Title')
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#              ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      Text(this.message)
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#           ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets variable.language.this.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets punctuation.accessor.ets
+#                ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets variable.other.property.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>        .fancy(24)
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#         ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#               ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets constant.numeric.decimal.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>        .fontColor($r('app.color.primary'))
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#         ^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                   ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.function.resource.arkts.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                       ^^^^^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets
+#                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      TextInput({ text: $$this.message })
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets
+#                  ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                        ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets keyword.operator.binding.arkts.ets
+#                          ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.language.this.ets
+#                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets punctuation.accessor.ets
+#                               ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.property.ets
+#                                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      Image($rawfile('logo.png')).width(48)
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#            ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.function.resource.arkts.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                      ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets
+#                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#                                  ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                        ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets constant.numeric.decimal.ets
+#                                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      List({ scroller: this.scroller }) {
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets
+#             ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                       ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.language.this.ets
+#                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets punctuation.accessor.ets
+#                            ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.property.ets
+#                                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>        ForEach(this.tasks, (item: Task, index: number) => {
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#        ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets support.function.rendering-control.arkts.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets variable.language.this.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.accessor.ets
+#                     ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets variable.other.property.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.separator.comma.ets
+#                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                             ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets variable.parameter.ets
+#                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets
+#                                   ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets entity.name.type.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.separator.parameter.ets
+#                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets
+#                                         ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets variable.parameter.ets
+#                                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets
+#                                                ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets support.type.primitive.ets
+#                                                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                                                        ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets storage.type.function.arrow.ets
+#                                                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                                                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+>          ListItem() {
+#^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets
+#          ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets support.class.component.arkts.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>            Row() {
+#^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets
+#            ^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>              Text(item.name)
+#^^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets
+#              ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                   ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets variable.other.object.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets punctuation.accessor.ets
+#                        ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets variable.other.property.ets
+#                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>              Blank()
+#^^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets
+#              ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>              Toggle({ type: ToggleType.Checkbox, isOn: item.done })
+#^^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets
+#              ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets
+#                       ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                             ^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.object.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets punctuation.accessor.ets
+#                                        ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.property.ets
+#                                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.separator.comma.ets
+#                                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets
+#                                                  ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                                                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                                        ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.object.ets
+#                                                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets punctuation.accessor.ets
+#                                                             ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets variable.other.property.ets
+#                                                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                                                                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>            }
+#^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>          }
+#^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>        }, (item: Task) => item.name)
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.separator.comma.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#            ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets variable.parameter.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets
+#                  ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets entity.name.type.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                        ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets storage.type.function.arrow.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                           ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets variable.other.object.ets
+#                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.accessor.ets
+#                                ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets variable.other.property.ets
+#                                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      }
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>      if (this.selected) {
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#      ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets keyword.control.conditional.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#          ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets variable.language.this.ets
+#              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets punctuation.accessor.ets
+#               ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets variable.other.property.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>        Button($r('app.string.ok')).onClick(() => {
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#        ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#               ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets support.function.resource.arkts.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                   ^^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets string.quoted.single.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#                                    ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                                             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                                               ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets storage.type.function.arrow.ets
+#                                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets
+#                                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+>          router.pushUrl({ url: 'pages/Detail' });
+#^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets
+#          ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.function-call.ets variable.other.object.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#                 ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+#                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets
+#                           ^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets
+#                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets meta.object-literal.key.ets punctuation.separator.key-value.ets
+#                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                                 ^^^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets string.quoted.single.ets
+#                                             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets meta.object.member.ets
+#                                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.objectliteral.ets punctuation.definition.block.ets
+#                                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+#                                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.terminator.statement.ets
+>        })
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      } else {
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+#       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#        ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets keyword.control.conditional.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>        Divider()
+#^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#        ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets support.class.component.arkts.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets meta.brace.round.ets
+>      }
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets
+#      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>    }
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets
+#    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.block.ets punctuation.definition.block.ets
+>    .width('100%')
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#     ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#            ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+>    .height('100%')
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#     ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#             ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>}
+#^ source.ets meta.struct.ets punctuation.definition.block.ets
+>
+>@ComponentV2
+#^ source.ets meta.decorator.ets punctuation.decorator.ets
+# ^^^^^^^^^^^ source.ets meta.decorator.ets support.function.decorator.arkts.ets
+>struct Child {
+#^^^^^^ source.ets meta.struct.ets storage.type.struct.ets
+#      ^ source.ets meta.struct.ets
+#       ^^^^^ source.ets meta.struct.ets entity.name.type.class.ets
+#            ^ source.ets meta.struct.ets
+#             ^ source.ets meta.struct.ets punctuation.definition.block.ets
+>  @Param @Require label: string = '';
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#        ^ source.ets meta.struct.ets
+#         ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#          ^^^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#                 ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                  ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#                       ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                        ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                         ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                               ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                                ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                                 ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                                  ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#                                   ^ source.ets meta.struct.ets meta.field.declaration.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                                    ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @Local count: number = 0;
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#        ^ source.ets meta.struct.ets meta.field.declaration.ets
+#         ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets variable.object.property.ets
+#              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#               ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                ^^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets support.type.primitive.ets
+#                      ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                       ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                        ^ source.ets meta.struct.ets meta.field.declaration.ets
+#                         ^ source.ets meta.struct.ets meta.field.declaration.ets constant.numeric.decimal.ets
+#                          ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>  @Event onTap: () => void = () => {};
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#        ^ source.ets meta.struct.ets meta.field.declaration.ets
+#         ^^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.definition.property.ets entity.name.function.ets
+#              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#               ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                 ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                  ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets
+#                   ^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets storage.type.function.arrow.ets
+#                     ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets
+#                      ^^^^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets support.type.primitive.ets
+#                          ^ source.ets meta.struct.ets meta.field.declaration.ets meta.type.annotation.ets meta.type.function.return.ets
+#                           ^ source.ets meta.struct.ets meta.field.declaration.ets keyword.operator.assignment.ets
+#                            ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets
+#                             ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                              ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                               ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets
+#                                ^^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets storage.type.function.arrow.ets
+#                                  ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets
+#                                   ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+#                                    ^ source.ets meta.struct.ets meta.field.declaration.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+#                                     ^ source.ets meta.struct.ets punctuation.terminator.statement.ets
+>
+>  @Monitor('count')
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+#          ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+#           ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.begin.ets
+#            ^^^^^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets
+#                 ^ source.ets meta.struct.ets meta.decorator.ets string.quoted.single.ets punctuation.definition.string.end.ets
+#                  ^ source.ets meta.struct.ets meta.decorator.ets meta.brace.round.ets
+>  onChange(monitor: IMonitor) {
+#^^ source.ets meta.struct.ets meta.method.declaration.ets
+#  ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#           ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets variable.parameter.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets meta.type.annotation.ets
+#                    ^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets meta.type.annotation.ets entity.name.type.ets
+#                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                             ^ source.ets meta.struct.ets meta.method.declaration.ets
+#                              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    console.log(`${monitor.value()?.before}`);
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets variable.other.object.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#            ^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.begin.ets
+#                 ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.begin.ets
+#                   ^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets meta.function-call.ets variable.other.object.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets meta.function-call.ets punctuation.accessor.ets
+#                           ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets meta.function-call.ets entity.name.function.ets
+#                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets meta.brace.round.ets
+#                                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets meta.brace.round.ets
+#                                  ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets punctuation.accessor.optional.ets
+#                                    ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.other.property.ets
+#                                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.end.ets
+#                                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets string.template.ets punctuation.definition.string.template.end.ets
+#                                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                                             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.terminator.statement.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>
+>  @Computed
+#^^ source.ets meta.struct.ets
+#  ^ source.ets meta.struct.ets meta.decorator.ets punctuation.decorator.ets
+#   ^^^^^^^^ source.ets meta.struct.ets meta.decorator.ets support.function.decorator.arkts.ets
+>  get double(): number {
+#^^ source.ets meta.struct.ets
+#  ^^^ source.ets meta.struct.ets meta.method.declaration.ets storage.type.property.ets
+#     ^ source.ets meta.struct.ets meta.method.declaration.ets
+#      ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#              ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets keyword.operator.type.annotation.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets support.type.primitive.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.return.type.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    return this.count * 2;
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets keyword.control.flow.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#           ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets variable.language.this.ets
+#               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.accessor.ets
+#                ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets variable.other.property.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets keyword.operator.arithmetic.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets constant.numeric.decimal.ets
+#                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.terminator.statement.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>
+>  build() {
+#^^ source.ets meta.struct.ets meta.method.declaration.ets
+#  ^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.definition.method.ets entity.name.function.ets
+#       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#         ^ source.ets meta.struct.ets meta.method.declaration.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>    Repeat<number>([1, 2, 3]).each((obj: RepeatItem<number>) => {
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#    ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets support.function.rendering-control.arkts.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.type.parameters.ets punctuation.definition.typeparameters.begin.ets
+#           ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.type.parameters.ets support.type.primitive.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.type.parameters.ets punctuation.definition.typeparameters.end.ets
+#                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets meta.brace.square.ets
+#                    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets constant.numeric.decimal.ets
+#                     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets punctuation.separator.comma.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets constant.numeric.decimal.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets punctuation.separator.comma.ets
+#                         ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets
+#                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets constant.numeric.decimal.ets
+#                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.array.literal.ets meta.brace.square.ets
+#                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                             ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets punctuation.accessor.ets
+#                              ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.function-call.ets entity.name.function.ets
+#                                  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+#                                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.begin.ets
+#                                    ^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets variable.parameter.ets
+#                                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets keyword.operator.type.annotation.ets
+#                                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets
+#                                         ^^^^^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets entity.name.type.ets
+#                                                   ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets meta.type.parameters.ets punctuation.definition.typeparameters.begin.ets
+#                                                    ^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets meta.type.parameters.ets support.type.primitive.ets
+#                                                          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets meta.type.annotation.ets meta.type.parameters.ets punctuation.definition.typeparameters.end.ets
+#                                                           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.parameters.ets punctuation.definition.parameters.end.ets
+#                                                            ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets
+#                                                             ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets storage.type.function.arrow.ets
+#                                                               ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets
+#                                                                ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+>      Text(`${obj.item}`)
+#^^^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets
+#      ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets support.class.component.arkts.ets
+#          ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+#           ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets punctuation.definition.string.template.begin.ets
+#            ^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.begin.ets
+#              ^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.other.object.ets
+#                 ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets punctuation.accessor.ets
+#                  ^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets meta.template.expression.ets meta.embedded.line.ets variable.other.property.ets
+#                      ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets meta.template.expression.ets punctuation.definition.template-expression.end.ets
+#                       ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets string.template.ets punctuation.definition.string.template.end.ets
+#                        ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets meta.brace.round.ets
+>    })
+#^^^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets
+#    ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.arrow.ets meta.block.ets punctuation.definition.block.ets
+#     ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets meta.brace.round.ets
+>  }
+#^^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets
+#  ^ source.ets meta.struct.ets meta.method.declaration.ets meta.block.ets punctuation.definition.block.ets
+>}
+#^ source.ets meta.struct.ets punctuation.definition.block.ets
+>

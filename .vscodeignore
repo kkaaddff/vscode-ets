@@ -1,4 +1,11 @@
-.vscode/**
-.vscode-test/**
-.gitignore
-vsc-extension-quickstart.md
+**
+!package.json
+!README.md
+!CHANGELOG.md
+!LICENSE
+!ThirdPartyNotices.txt
+!language-configuration.json
+!assets/nav_arkts.png
+!dist/extension.js
+!syntaxes/*.json
+!snippets/*.json

@@ -1,0 +1,564 @@
+{
+  "components": [
+    {
+      "name": "Column",
+      "summary": "沿垂直方向布局的容器。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-column.md"
+    },
+    {
+      "name": "Row",
+      "summary": "沿水平方向布局的容器。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-row.md"
+    },
+    {
+      "name": "Stack",
+      "summary": "堆叠容器，子组件按顺序依次入栈，后一个覆盖前一个。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-stack.md"
+    },
+    {
+      "name": "Flex",
+      "summary": "以弹性方式布局子组件的容器，支持换行、主轴/交叉轴对齐。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-flex.md"
+    },
+    {
+      "name": "RelativeContainer",
+      "summary": "相对布局容器，子组件通过 alignRules 相对容器或兄弟组件定位。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-relativecontainer.md"
+    },
+    {
+      "name": "GridRow",
+      "summary": "栅格布局容器，配合 GridCol 实现响应式栅格。",
+      "children": "仅 GridCol",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-gridrow.md"
+    },
+    {
+      "name": "GridCol",
+      "summary": "栅格子组件，必须作为 GridRow 的子组件。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-gridcol.md"
+    },
+    {
+      "name": "List",
+      "summary": "列表容器，包含一系列相同宽度的列表项。",
+      "children": "ListItem / ListItemGroup",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-list.md"
+    },
+    {
+      "name": "ListItem",
+      "summary": "列表项，必须配合 List 使用。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-listitem.md"
+    },
+    {
+      "name": "ListItemGroup",
+      "summary": "列表分组，配合 List 展示分组列表。",
+      "children": "ListItem",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-listitemgroup.md"
+    },
+    {
+      "name": "Grid",
+      "summary": "网格容器，由“行”和“列”分割的单元格组成。",
+      "children": "GridItem",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-grid.md"
+    },
+    {
+      "name": "GridItem",
+      "summary": "网格容器中的单项内容。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-griditem.md"
+    },
+    {
+      "name": "WaterFlow",
+      "summary": "瀑布流容器，由“行”和“列”分割的单元格组成。",
+      "children": "FlowItem",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-waterflow.md"
+    },
+    {
+      "name": "FlowItem",
+      "summary": "瀑布流容器的子组件。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-flowitem.md"
+    },
+    {
+      "name": "Scroll",
+      "summary": "可滚动的容器，内容超出尺寸时可以滚动。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-scroll.md"
+    },
+    {
+      "name": "Swiper",
+      "summary": "滑块视图容器，提供子组件滑动轮播显示的能力。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-swiper.md"
+    },
+    {
+      "name": "Tabs",
+      "summary": "通过页签进行内容视图切换的容器。",
+      "children": "TabContent",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-tabs.md"
+    },
+    {
+      "name": "TabContent",
+      "summary": "Tabs 中对应一个切换页签的内容视图。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-tabcontent.md"
+    },
+    {
+      "name": "Navigation",
+      "summary": "路由导航的根视图容器，包含标题栏、内容区和工具栏。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md"
+    },
+    {
+      "name": "NavDestination",
+      "summary": "作为 Navigation 子页面的根容器。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-navdestination.md"
+    },
+    {
+      "name": "NavRouter",
+      "summary": "导航组件（已废弃，推荐使用 NavPathStack 路由）。",
+      "children": "两个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-navrouter.md"
+    },
+    {
+      "name": "Navigator",
+      "summary": "路由容器组件（已废弃，推荐使用 Navigation）。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-navigator.md"
+    },
+    {
+      "name": "Refresh",
+      "summary": "可以进行页面下拉操作并显示刷新动效的容器。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-refresh.md"
+    },
+    {
+      "name": "SideBarContainer",
+      "summary": "提供侧边栏可以显示和隐藏的侧边栏容器。",
+      "children": "两个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-sidebarcontainer.md"
+    },
+    {
+      "name": "ColumnSplit",
+      "summary": "将子组件纵向布局，并在每个子组件之间插入一根横向分割线。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-columnsplit.md"
+    },
+    {
+      "name": "RowSplit",
+      "summary": "将子组件横向布局，并在每个子组件之间插入一根纵向分割线。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-rowsplit.md"
+    },
+    {
+      "name": "FolderStack",
+      "summary": "继承自 Stack，新增折叠屏悬停能力。",
+      "children": "多个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-folderstack.md"
+    },
+    {
+      "name": "Badge",
+      "summary": "信息标记组件，可附加在单个组件上用于信息提醒。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-badge.md"
+    },
+    {
+      "name": "Counter",
+      "summary": "计数器组件，提供相应的增加或者减少的计数操作。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-counter.md"
+    },
+    {
+      "name": "Panel",
+      "summary": "可滑动面板（已废弃，推荐使用 bindSheet）。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-panel.md"
+    },
+    {
+      "name": "Hyperlink",
+      "summary": "超链接组件。",
+      "children": "单个子组件（Image）",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-hyperlink.md"
+    },
+    {
+      "name": "AlphabetIndexer",
+      "summary": "可以与容器组件联动用于按逻辑结构快速定位的索引条。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-container-alphabet-indexer.md"
+    },
+    {
+      "name": "Text",
+      "summary": "显示一段文本。",
+      "children": "Span / ImageSpan / SymbolSpan / ContainerSpan",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-text.md"
+    },
+    {
+      "name": "Span",
+      "summary": "作为 Text、ContainerSpan 的子组件，用于显示行内文本。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-span.md"
+    },
+    {
+      "name": "ImageSpan",
+      "summary": "Text、ContainerSpan 的子组件，用于显示行内图片。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-imagespan.md"
+    },
+    {
+      "name": "SymbolSpan",
+      "summary": "作为 Text 的子组件，用于显示图标小符号。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-symbolSpan.md"
+    },
+    {
+      "name": "ContainerSpan",
+      "summary": "Text 的子组件，用于统一管理多个 Span、ImageSpan 的背景色及圆角。",
+      "children": "Span / ImageSpan",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-containerspan.md"
+    },
+    {
+      "name": "Image",
+      "summary": "图片组件，支持本地图片和网络图片的渲染展示。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-image.md"
+    },
+    {
+      "name": "ImageAnimator",
+      "summary": "提供帧动画组件实现逐帧播放图片的能力。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-imageanimator.md"
+    },
+    {
+      "name": "Button",
+      "summary": "按钮组件，可快速创建不同样式的按钮。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-button.md"
+    },
+    {
+      "name": "Toggle",
+      "summary": "组件提供勾选框样式、状态按钮样式及开关样式。",
+      "children": "仅 Button 类型支持单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-toggle.md"
+    },
+    {
+      "name": "Checkbox",
+      "summary": "提供多选框组件，通常用于某选项的打开或关闭。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-checkbox.md"
+    },
+    {
+      "name": "CheckboxGroup",
+      "summary": "多选框群组，用于控制多选框全选或者不全选状态。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-checkboxgroup.md"
+    },
+    {
+      "name": "Radio",
+      "summary": "单选框，提供相应的用户交互选择项。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-radio.md"
+    },
+    {
+      "name": "Slider",
+      "summary": "滑动条组件，通常用于快速调节设置值。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-slider.md"
+    },
+    {
+      "name": "Rating",
+      "summary": "提供在给定范围内选择评分的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-rating.md"
+    },
+    {
+      "name": "Progress",
+      "summary": "进度条组件，用于显示内容加载或操作处理等进度。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-progress.md"
+    },
+    {
+      "name": "LoadingProgress",
+      "summary": "用于显示加载动效的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-loadingprogress.md"
+    },
+    {
+      "name": "DataPanel",
+      "summary": "数据面板组件，用于将多个数据占比情况使用占比图进行展示。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-datapanel.md"
+    },
+    {
+      "name": "Gauge",
+      "summary": "数据量规图表组件，用于将数据展示为环形图表。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-gauge.md"
+    },
+    {
+      "name": "Divider",
+      "summary": "分隔器组件，分隔不同内容块/内容元素。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-divider.md"
+    },
+    {
+      "name": "Blank",
+      "summary": "空白填充组件，在容器主轴方向上自动填充剩余空间。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-blank.md"
+    },
+    {
+      "name": "TextInput",
+      "summary": "单行文本输入框组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-textinput.md"
+    },
+    {
+      "name": "TextArea",
+      "summary": "多行文本输入框组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-textarea.md"
+    },
+    {
+      "name": "Search",
+      "summary": "搜索框组件，适用于浏览器的搜索内容输入框等应用场景。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-search.md"
+    },
+    {
+      "name": "Select",
+      "summary": "提供下拉选择菜单，让用户在多个选项间选择。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-select.md"
+    },
+    {
+      "name": "RichText",
+      "summary": "富文本组件，解析并显示 HTML 格式文本。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-richtext.md"
+    },
+    {
+      "name": "RichEditor",
+      "summary": "支持图文混排和文本交互式编辑的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-richeditor.md"
+    },
+    {
+      "name": "SymbolGlyph",
+      "summary": "显示图标小符号的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-symbolGlyph.md"
+    },
+    {
+      "name": "Marquee",
+      "summary": "跑马灯组件，用于滚动展示一段单行文本。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-marquee.md"
+    },
+    {
+      "name": "QRCode",
+      "summary": "用于显示单个二维码的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-qrcode.md"
+    },
+    {
+      "name": "TextClock",
+      "summary": "通过文本将当前系统时间显示在设备上。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-textclock.md"
+    },
+    {
+      "name": "TextTimer",
+      "summary": "通过文本显示计时信息并控制其计时器状态的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-texttimer.md"
+    },
+    {
+      "name": "TextPicker",
+      "summary": "滑动选择文本内容的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-textpicker.md"
+    },
+    {
+      "name": "DatePicker",
+      "summary": "日期选择器组件，用于根据指定日期范围创建日期滑动选择器。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-datepicker.md"
+    },
+    {
+      "name": "TimePicker",
+      "summary": "时间选择组件，根据指定参数创建选择器。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-timepicker.md"
+    },
+    {
+      "name": "CalendarPicker",
+      "summary": "日历选择器组件，提供下拉日历弹窗。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-calendarpicker.md"
+    },
+    {
+      "name": "PatternLock",
+      "summary": "图案密码锁组件，以九宫格图案的方式输入密码。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-patternlock.md"
+    },
+    {
+      "name": "ScrollBar",
+      "summary": "滚动条组件，用于配合可滚动组件使用。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-scrollbar.md"
+    },
+    {
+      "name": "Stepper",
+      "summary": "步骤导航器组件，适用于引导用户按照步骤完成任务的导航场景。",
+      "children": "StepperItem",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-stepper.md"
+    },
+    {
+      "name": "StepperItem",
+      "summary": "用作 Stepper 组件的页面子组件。",
+      "children": "单个子组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-stepperitem.md"
+    },
+    {
+      "name": "Menu",
+      "summary": "以垂直列表形式显示的菜单。",
+      "children": "MenuItem / MenuItemGroup",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-menu.md"
+    },
+    {
+      "name": "MenuItem",
+      "summary": "用来展示菜单 Menu 中具体的 item 菜单项。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-menuitem.md"
+    },
+    {
+      "name": "MenuItemGroup",
+      "summary": "该组件用来展示菜单 MenuItem 的分组。",
+      "children": "MenuItem",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-menuitemgroup.md"
+    },
+    {
+      "name": "XComponent",
+      "summary": "提供用于图形绘制和媒体数据写入的 Surface，常用于 NDK 渲染。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md"
+    },
+    {
+      "name": "NodeContainer",
+      "summary": "基础组件，用于挂载自定义节点（FrameNode / BuilderNode）。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-nodecontainer.md"
+    },
+    {
+      "name": "Component3D",
+      "summary": "3D 渲染组件，可以加载 3D 模型资源并做自定义渲染。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-basic-components-component3d.md"
+    },
+    {
+      "name": "ContentSlot",
+      "summary": "用于渲染并管理 Native 层使用 C-API 创建的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-components-contentSlot.md"
+    },
+    {
+      "name": "Canvas",
+      "summary": "提供画布组件，用于自定义绘制图形。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md"
+    },
+    {
+      "name": "Shape",
+      "summary": "绘制组件的父组件，描述所有绘制组件均支持的通用属性。",
+      "children": "绘制组件",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-shape.md"
+    },
+    {
+      "name": "Circle",
+      "summary": "用于绘制圆形的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-circle.md"
+    },
+    {
+      "name": "Ellipse",
+      "summary": "椭圆绘制组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-ellipse.md"
+    },
+    {
+      "name": "Line",
+      "summary": "直线绘制组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-line.md"
+    },
+    {
+      "name": "Polyline",
+      "summary": "折线绘制组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-polyline.md"
+    },
+    {
+      "name": "Polygon",
+      "summary": "多边形绘制组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-polygon.md"
+    },
+    {
+      "name": "Path",
+      "summary": "路径绘制组件，根据绘制路径生成封闭的自定义形状。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-path.md"
+    },
+    {
+      "name": "Rect",
+      "summary": "矩形绘制组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-drawing-components-rect.md"
+    },
+    {
+      "name": "Video",
+      "summary": "用于播放视频文件并控制其播放状态的组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-media-components-video.md"
+    },
+    {
+      "name": "Particle",
+      "summary": "粒子动画组件。",
+      "children": "无",
+      "doc": "reference/apis-arkui/arkui-ts/ts-particle-animation.md"
+    },
+    {
+      "name": "Web",
+      "summary": "提供具有网页显示能力的 Web 组件。",
+      "children": "无",
+      "doc": "reference/apis-arkweb/arkts-basic-components-web.md"
+    }
+  ],
+  "renderingControl": [
+    {
+      "name": "ForEach",
+      "summary": "基于数组循环渲染组件。",
+      "signature": "(arr, itemGenerator, keyGenerator?)",
+      "doc": "reference/apis-arkui/arkui-ts/ts-rendering-control-foreach.md"
+    },
+    {
+      "name": "LazyForEach",
+      "summary": "从 IDataSource 按需迭代数据并创建组件，用于长列表懒加载。",
+      "signature": "(dataSource, itemGenerator, keyGenerator?)",
+      "doc": "reference/apis-arkui/arkui-ts/ts-rendering-control-lazyforeach.md"
+    },
+    {
+      "name": "Repeat",
+      "summary": "基于数组的循环渲染，支持懒加载和组件节点复用（V2 推荐）。",
+      "signature": "(arr).each(...).key(...)",
+      "doc": "reference/apis-arkui/arkui-ts/ts-rendering-control-repeat.md"
+    }
+  ]
+}

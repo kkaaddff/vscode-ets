@@ -1,0 +1,584 @@
+{
+  "Entry 页面": {
+    "prefix": "entry",
+    "body": [
+      "@Entry",
+      "@Component",
+      "struct ${1:${TM_FILENAME_BASE}} {",
+      "\t@State ${2:message}: ${3:string} = ${4:'Hello World'};",
+      "",
+      "\tbuild() {",
+      "\t\t${5:Column}() {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t\t.width('100%')",
+      "\t\t.height('100%')",
+      "\t}",
+      "}"
+    ],
+    "description": "@Entry @Component 页面入口组件"
+  },
+  "Component 自定义组件": {
+    "prefix": "component",
+    "body": [
+      "@Component",
+      "${1|export ,|}struct ${2:${TM_FILENAME_BASE}} {",
+      "\tbuild() {",
+      "\t\t${3:Column}() {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "@Component 自定义组件（状态管理 V1）"
+  },
+  "ComponentV2 自定义组件": {
+    "prefix": "componentv2",
+    "body": [
+      "@ComponentV2",
+      "${1|export ,|}struct ${2:${TM_FILENAME_BASE}} {",
+      "\t@Param ${3:title}: ${4:string} = ${5:''};",
+      "\t@Local ${6:count}: ${7:number} = ${8:0};",
+      "",
+      "\tbuild() {",
+      "\t\t${9:Column}() {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}",
+      "}"
+    ],
+    "description": "@ComponentV2 自定义组件（状态管理 V2）"
+  },
+  "CustomDialog 自定义弹窗": {
+    "prefix": "customdialog",
+    "body": [
+      "@CustomDialog",
+      "struct ${1:MyDialog} {",
+      "\tcontroller: CustomDialogController;",
+      "",
+      "\tbuild() {",
+      "\t\tColumn() {",
+      "\t\t\t$0",
+      "\t\t\tButton('关闭').onClick(() => {",
+      "\t\t\t\tthis.controller.close();",
+      "\t\t\t})",
+      "\t\t}",
+      "\t\t.padding(20)",
+      "\t}",
+      "}"
+    ],
+    "description": "@CustomDialog 自定义弹窗组件"
+  },
+  "CustomDialogController": {
+    "prefix": "dialogcontroller",
+    "body": [
+      "${1:dialogController}: CustomDialogController = new CustomDialogController({",
+      "\tbuilder: ${2:MyDialog}(),",
+      "\tautoCancel: ${3:true},",
+      "});"
+    ],
+    "description": "声明 CustomDialogController"
+  },
+  "Builder 组件内构建函数": {
+    "prefix": "builder",
+    "body": [
+      "@Builder",
+      "${1:buildItem}(${2}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "组件内 @Builder 构建函数"
+  },
+  "Builder 全局构建函数": {
+    "prefix": "builderfn",
+    "body": [
+      "@Builder",
+      "function ${1:buildItem}(${2}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "全局 @Builder 构建函数"
+  },
+  "LocalBuilder": {
+    "prefix": "localbuilder",
+    "body": [
+      "@LocalBuilder",
+      "${1:buildItem}(${2}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "@LocalBuilder 局部构建函数"
+  },
+  "BuilderParam": {
+    "prefix": "builderparam",
+    "body": [
+      "@BuilderParam ${1:content}: () => void = ${2:this.defaultBuilder};"
+    ],
+    "description": "@BuilderParam 插槽"
+  },
+  "Styles": {
+    "prefix": "styles",
+    "body": [
+      "@Styles",
+      "function ${1:commonStyle}() {",
+      "\t.${2:width}(${3:'100%'})",
+      "\t$0",
+      "}"
+    ],
+    "description": "@Styles 通用样式复用"
+  },
+  "Extend": {
+    "prefix": "extend",
+    "body": [
+      "@Extend(${1:Text})",
+      "function ${2:fancy}(${3:size: number}) {",
+      "\t.${4:fontSize}(${5:size})",
+      "\t$0",
+      "}"
+    ],
+    "description": "@Extend 扩展内置组件样式"
+  },
+  "@State 状态变量": {
+    "prefix": "state",
+    "body": [
+      "@State ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@State 组件内状态"
+  },
+  "@Prop 状态变量": {
+    "prefix": "prop",
+    "body": [
+      "@Prop ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Prop 父→子单向同步"
+  },
+  "@Link 状态变量": {
+    "prefix": "link",
+    "body": [
+      "@Link ${1:name}: ${2:type};"
+    ],
+    "description": "@Link 父子双向同步"
+  },
+  "@Provide 状态变量": {
+    "prefix": "provide",
+    "body": [
+      "@Provide ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Provide 跨层级提供"
+  },
+  "@Consume 状态变量": {
+    "prefix": "consume",
+    "body": [
+      "@Consume ${1:name}: ${2:type};"
+    ],
+    "description": "@Consume 跨层级消费"
+  },
+  "@ObjectLink 状态变量": {
+    "prefix": "objectlink",
+    "body": [
+      "@ObjectLink ${1:name}: ${2:type};"
+    ],
+    "description": "@ObjectLink 嵌套对象观察"
+  },
+  "@Local 状态变量": {
+    "prefix": "local",
+    "body": [
+      "@Local ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Local V2 组件内部状态"
+  },
+  "@Param 状态变量": {
+    "prefix": "param",
+    "body": [
+      "@Param ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Param V2 组件输入参数"
+  },
+  "@Provider 状态变量": {
+    "prefix": "provider",
+    "body": [
+      "@Provider() ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Provider V2 跨层级提供"
+  },
+  "@Consumer 状态变量": {
+    "prefix": "consumer",
+    "body": [
+      "@Consumer() ${1:name}: ${2:type} = ${3:value};"
+    ],
+    "description": "@Consumer V2 跨层级消费"
+  },
+  "@Watch 状态变量": {
+    "prefix": "watch",
+    "body": [
+      "@${1|State,Prop,Link,Provide,Consume,ObjectLink|} @Watch('${2:onChange}') ${3:name}: ${4:type}${5: = value};",
+      "",
+      "${2:onChange}(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "带 @Watch 监听的状态变量"
+  },
+  "@StorageLink": {
+    "prefix": "storagelink",
+    "body": [
+      "@StorageLink('${1:key}') ${2:name}: ${3:type} = ${4:value};"
+    ],
+    "description": "与 AppStorage 双向同步"
+  },
+  "@StorageProp": {
+    "prefix": "storageprop",
+    "body": [
+      "@StorageProp('${1:key}') ${2:name}: ${3:type} = ${4:value};"
+    ],
+    "description": "与 AppStorage 单向同步"
+  },
+  "@LocalStorageLink": {
+    "prefix": "localstoragelink",
+    "body": [
+      "@LocalStorageLink('${1:key}') ${2:name}: ${3:type} = ${4:value};"
+    ],
+    "description": "与 LocalStorage 双向同步"
+  },
+  "@Event": {
+    "prefix": "event",
+    "body": [
+      "@Event ${1:onChange}: (${2:value: number}) => void = (${3:value: number}) => {};"
+    ],
+    "description": "V2 输出回调"
+  },
+  "@Monitor": {
+    "prefix": "monitor",
+    "body": [
+      "@Monitor('${1:path}')",
+      "${2:onChange}(monitor: IMonitor) {",
+      "\tmonitor.dirty.forEach((path: string) => {",
+      "\t\tconsole.info(`\\${path}: \\${monitor.value(path)?.before} -> \\${monitor.value(path)?.now}`);",
+      "\t});",
+      "}"
+    ],
+    "description": "V2 状态变量监听"
+  },
+  "@Computed": {
+    "prefix": "computed",
+    "body": [
+      "@Computed",
+      "get ${1:value}(): ${2:number} {",
+      "\treturn $0;",
+      "}"
+    ],
+    "description": "V2 计算属性"
+  },
+  "@Observed 类": {
+    "prefix": "observed",
+    "body": [
+      "@Observed",
+      "class ${1:Model} {",
+      "\t${2:name}: ${3:string} = ${4:''};",
+      "}"
+    ],
+    "description": "@Observed 可观察类（V1）"
+  },
+  "@ObservedV2 类": {
+    "prefix": "observedv2",
+    "body": [
+      "@ObservedV2",
+      "class ${1:Model} {",
+      "\t@Trace ${2:name}: ${3:string} = ${4:''};",
+      "}"
+    ],
+    "description": "@ObservedV2 + @Trace 可观察类（V2）"
+  },
+  "生命周期 aboutToAppear": {
+    "prefix": "abouttoappear",
+    "body": [
+      "aboutToAppear(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "组件即将出现（build 之前）"
+  },
+  "生命周期 aboutToDisappear": {
+    "prefix": "abouttodisappear",
+    "body": [
+      "aboutToDisappear(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "组件即将销毁"
+  },
+  "生命周期 onPageShow": {
+    "prefix": "onpageshow",
+    "body": [
+      "onPageShow(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "页面每次显示（仅 @Entry）"
+  },
+  "生命周期 onPageHide": {
+    "prefix": "onpagehide",
+    "body": [
+      "onPageHide(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "页面每次隐藏（仅 @Entry）"
+  },
+  "生命周期 onBackPress": {
+    "prefix": "onbackpress",
+    "body": [
+      "onBackPress(): boolean | void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "返回键（仅 @Entry），返回 true 表示自行处理"
+  },
+  "生命周期 aboutToReuse": {
+    "prefix": "abouttoreuse",
+    "body": [
+      "aboutToReuse(params: Record<string, Object>): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "复用组件被重新加入组件树（@Reusable）"
+  },
+  "生命周期 onDidBuild": {
+    "prefix": "ondidbuild",
+    "body": [
+      "onDidBuild(): void {",
+      "\t$0",
+      "}"
+    ],
+    "description": "build() 执行完成后"
+  },
+  "ForEach": {
+    "prefix": "foreach",
+    "body": [
+      "ForEach(${1:this.list}, (${2:item}: ${3:string}, ${4:index}: number) => {",
+      "\t$0",
+      "}, (${2:item}: ${3:string}, ${4:index}: number) => ${5:`\\${index}_\\${JSON.stringify(item)}`})"
+    ],
+    "description": "ForEach 循环渲染"
+  },
+  "LazyForEach": {
+    "prefix": "lazyforeach",
+    "body": [
+      "LazyForEach(${1:this.dataSource}, (${2:item}: ${3:string}) => {",
+      "\t${4:ListItem}() {",
+      "\t\t$0",
+      "\t}",
+      "}, (${2:item}: ${3:string}) => ${5:item})"
+    ],
+    "description": "LazyForEach 懒加载渲染"
+  },
+  "Repeat": {
+    "prefix": "repeat",
+    "body": [
+      "Repeat<${1:string}>(${2:this.list})",
+      "\t.each((ri: RepeatItem<${1:string}>) => {",
+      "\t\t$0",
+      "\t})",
+      "\t.key((item: ${1:string}, index: number) => ${3:`\\${index}`})"
+    ],
+    "description": "Repeat 循环渲染（V2）"
+  },
+  "if / else 渲染": {
+    "prefix": "ifui",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$2",
+      "} else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "条件渲染"
+  },
+  "组件 Column": {
+    "prefix": "column",
+    "body": [
+      "Column(${1:{ space: ${2:10} \\}}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Column 垂直布局"
+  },
+  "组件 Row": {
+    "prefix": "row",
+    "body": [
+      "Row(${1:{ space: ${2:10} \\}}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Row 水平布局"
+  },
+  "组件 Stack": {
+    "prefix": "stack",
+    "body": [
+      "Stack(${1:{ alignContent: Alignment.${2:Center} \\}}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Stack 堆叠布局"
+  },
+  "组件 Flex": {
+    "prefix": "flex",
+    "body": [
+      "Flex({ direction: FlexDirection.${1:Row}, wrap: FlexWrap.${2:Wrap} }) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Flex 弹性布局"
+  },
+  "组件 RelativeContainer": {
+    "prefix": "relativecontainer",
+    "body": [
+      "RelativeContainer() {",
+      "\t$0",
+      "}"
+    ],
+    "description": "RelativeContainer 相对布局"
+  },
+  "组件 Scroll": {
+    "prefix": "scroll",
+    "body": [
+      "Scroll(${1:this.scroller}) {",
+      "\t${2:Column}() {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Scroll 可滚动容器"
+  },
+  "组件 List": {
+    "prefix": "list",
+    "body": [
+      "List({ space: ${1:10} }) {",
+      "\tForEach(${2:this.list}, (${3:item}: ${4:string}) => {",
+      "\t\tListItem() {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}, (${3:item}: ${4:string}) => ${3:item})",
+      "}"
+    ],
+    "description": "List 列表"
+  },
+  "组件 Grid": {
+    "prefix": "grid",
+    "body": [
+      "Grid() {",
+      "\tForEach(${1:this.list}, (${2:item}: ${3:string}) => {",
+      "\t\tGridItem() {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}, (${2:item}: ${3:string}) => ${2:item})",
+      "}",
+      ".columnsTemplate('${4:1fr 1fr}')"
+    ],
+    "description": "Grid 网格"
+  },
+  "组件 Tabs": {
+    "prefix": "tabs",
+    "body": [
+      "Tabs({ barPosition: BarPosition.${1:End} }) {",
+      "\tTabContent() {",
+      "\t\t$0",
+      "\t}",
+      "\t.tabBar('${2:首页}')",
+      "}"
+    ],
+    "description": "Tabs 页签"
+  },
+  "组件 Navigation": {
+    "prefix": "navigation",
+    "body": [
+      "Navigation(${1:this.pathStack}) {",
+      "\t$0",
+      "}",
+      ".title('${2:标题}')"
+    ],
+    "description": "Navigation 导航容器"
+  },
+  "组件 NavDestination": {
+    "prefix": "navdestination",
+    "body": [
+      "NavDestination() {",
+      "\t$0",
+      "}",
+      ".title('${1:标题}')"
+    ],
+    "description": "NavDestination 导航子页面"
+  },
+  "组件 Swiper": {
+    "prefix": "swiper",
+    "body": [
+      "Swiper() {",
+      "\t$0",
+      "}",
+      ".autoPlay(${1:true})"
+    ],
+    "description": "Swiper 轮播"
+  },
+  "组件 Text": {
+    "prefix": "text",
+    "body": [
+      "Text(${1:'text'})",
+      "\t.fontSize(${2:16})$0"
+    ],
+    "description": "Text 文本"
+  },
+  "组件 Button": {
+    "prefix": "button",
+    "body": [
+      "Button(${1:'button'})",
+      "\t.onClick(() => {",
+      "\t\t$0",
+      "\t})"
+    ],
+    "description": "Button 按钮"
+  },
+  "组件 Image": {
+    "prefix": "image",
+    "body": [
+      "Image(${1:\\$r('app.media.${2:icon}')})",
+      "\t.width(${3:100})",
+      "\t.height(${4:100})$0"
+    ],
+    "description": "Image 图片"
+  },
+  "组件 TextInput": {
+    "prefix": "textinput",
+    "body": [
+      "TextInput({ placeholder: '${1:请输入}', text: \\$\\$this.${2:value} })$0"
+    ],
+    "description": "TextInput 单行输入框"
+  },
+  "import": {
+    "prefix": "imp",
+    "body": [
+      "import { ${2} } from '${1:@kit.ArkUI}';"
+    ],
+    "description": "import 语句"
+  },
+  "router.pushUrl": {
+    "prefix": "pushurl",
+    "body": [
+      "router.pushUrl({ url: '${1:pages/Index}' });"
+    ],
+    "description": "页面跳转（router）"
+  },
+  "hilog": {
+    "prefix": "hilog",
+    "body": [
+      "hilog.${1|info,debug,warn,error|}(0x${2:0000}, '${3:TAG}', '%{public}s', ${4:message});"
+    ],
+    "description": "hilog 日志"
+  },
+  "console.log": {
+    "prefix": "log",
+    "body": [
+      "console.${1|log,info,warn,error|}($0);"
+    ],
+    "description": "console 日志"
+  }
+}

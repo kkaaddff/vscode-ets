@@ -1,9 +1,26 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "ets" extension will be documented in this file.
+## 1.0.0
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+完全重写。
 
-## [Unreleased]
+### 语法高亮
 
-- Initial release
+- 改为基于微软官方 TypeScript 语法生成（此前误用了 Dart 语法），TS 语法全部正确高亮：泛型、类型注解、模板字符串、正则、箭头函数、装饰器参数等。
+- 新增 `struct` 声明、内置装饰器（V1 / V2 状态管理）、内置组件、渲染控制（`ForEach` / `LazyForEach` / `Repeat`）、`$r()` / `$rawfile()`、`$$` 双向绑定的专属作用域。
+- Markdown 中 ` ```arkts ` / ` ```ets ` 代码块高亮。
+
+### 语言功能
+
+- 大纲 / 面包屑 / 快速跳转符号：struct、类、成员（含装饰器信息），以及 `build()` / `@Builder` 中的 UI 组件树。
+- 格式化文档 / 格式化选区：基于 TypeScript 格式化引擎，按 ArkUI 习惯对齐属性链、处理尾随闭包。
+- 装饰器补全（按上下文区分组件级与成员级）、内置组件与渲染控制补全。
+- 装饰器、组件悬停文档，附官方文档链接。
+- `$r('app.xxx.yyy')` / `$rawfile()`：资源补全、悬停预览（多限定词取值、图片预览）、跳转到定义、不存在资源的警告。
+- 颜色选择器：`#ARGB` / `#AARRGGBB`（透明度在前）、`rgb()` / `rgba()`、`Color` 枚举、`0xRRGGBB`、颜色资源引用。
+- 60+ 中文说明的代码片段。
+- 完整的语言配置：注释、括号、自动闭合、缩进规则、折叠区域。
+
+## 0.0.4
+
+- 初始版本：基础语法高亮。

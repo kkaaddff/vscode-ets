@@ -1,0 +1,6 @@
+{
+  "color": [
+    { "name": "primary", "value": "#FF007DFF" },
+    { "name": "alias", "value": "$color:primary" }
+  ]
+}

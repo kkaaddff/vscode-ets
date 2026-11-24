@@ -1,0 +1,335 @@
+[
+  {
+    "name": "Entry",
+    "target": "struct",
+    "group": "组件",
+    "summary": "将自定义组件标记为页面入口。一个页面有且仅有一个 `@Entry` 组件。",
+    "detail": "可选参数：`LocalStorage` 实例，或 `EntryOptions`（`routeName` 命名路由、`storage`、`useSharedStorage`）。",
+    "snippet": "Entry",
+    "doc": "ui/state-management/arkts-create-custom-components.md"
+  },
+  {
+    "name": "Component",
+    "target": "struct",
+    "group": "组件",
+    "summary": "声明状态管理 V1 的自定义组件（`struct`），组件必须实现 `build()` 方法。",
+    "detail": "可选参数 `{ freezeWhenInactive: true }` 开启组件冻结。",
+    "snippet": "Component",
+    "doc": "ui/state-management/arkts-create-custom-components.md"
+  },
+  {
+    "name": "ComponentV2",
+    "target": "struct",
+    "group": "组件",
+    "summary": "声明状态管理 V2 的自定义组件，配合 `@Local`、`@Param`、`@Event`、`@Provider`、`@Monitor` 等 V2 装饰器使用。",
+    "detail": "V1 与 V2 装饰器不可在同一个组件中混用。",
+    "snippet": "ComponentV2",
+    "doc": "ui/state-management/arkts-create-custom-components.md"
+  },
+  {
+    "name": "Preview",
+    "target": "struct",
+    "group": "组件",
+    "summary": "在 DevEco Studio 预览器中预览该组件，单个文件最多 10 个。",
+    "snippet": "Preview",
+    "doc": "ui/ui-ide-previewer.md"
+  },
+  {
+    "name": "CustomDialog",
+    "target": "struct",
+    "group": "组件",
+    "summary": "声明自定义弹窗组件，需配合 `CustomDialogController` 打开和关闭。",
+    "snippet": "CustomDialog",
+    "doc": "ui/arkts-common-components-custom-dialog.md"
+  },
+  {
+    "name": "Reusable",
+    "target": "struct",
+    "group": "组件",
+    "summary": "标记 V1 自定义组件可复用，组件从树上移除后进入复用缓存，复用时触发 `aboutToReuse()`。",
+    "snippet": "Reusable",
+    "doc": "ui/state-management/arkts-reusable.md"
+  },
+  {
+    "name": "ReusableV2",
+    "target": "struct",
+    "group": "组件",
+    "summary": "标记 `@ComponentV2` 自定义组件可复用。",
+    "snippet": "ReusableV2",
+    "doc": "ui/state-management/arkts-new-reusableV2.md"
+  },
+  {
+    "name": "Observed",
+    "target": "class",
+    "group": "V1 状态管理",
+    "summary": "装饰 class，使其实例的属性变化可被观察。配合 `@ObjectLink` 观察嵌套对象/数组元素的变化。",
+    "snippet": "Observed",
+    "doc": "ui/state-management/arkts-observed-and-objectlink.md"
+  },
+  {
+    "name": "Track",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "装饰 class 的属性，实现属性级的精准刷新：只有被 `@Track` 装饰的属性变化才会触发关联 UI 更新。",
+    "snippet": "Track",
+    "doc": "ui/state-management/arkts-track.md"
+  },
+  {
+    "name": "State",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "组件内私有状态变量，值变化会触发使用它的 UI 刷新。必须在本地初始化。",
+    "detail": "可作为 `@Prop` / `@Link` / `@ObjectLink` 等的数据源向子组件传递。",
+    "snippet": "State",
+    "doc": "ui/state-management/arkts-state.md"
+  },
+  {
+    "name": "Prop",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "父组件 → 子组件的单向同步。子组件对其修改不会同步回父组件，父组件变化会覆盖本地修改。",
+    "snippet": "Prop",
+    "doc": "ui/state-management/arkts-prop.md"
+  },
+  {
+    "name": "Link",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "父组件 ↔ 子组件的双向同步，与父组件的状态变量共享同一个值。",
+    "detail": "父组件通过 `this.xxx`（API 9+）或 `$xxx` 传入，禁止本地初始化。",
+    "snippet": "Link",
+    "doc": "ui/state-management/arkts-link.md"
+  },
+  {
+    "name": "Provide",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "向所有后代组件提供状态变量，与后代中的 `@Consume` 双向同步，无需逐层传参。",
+    "detail": "可指定别名：`@Provide('alias')`；`@Provide({ allowOverride: 'alias' })` 允许覆盖。",
+    "snippet": "Provide",
+    "doc": "ui/state-management/arkts-provide-and-consume.md"
+  },
+  {
+    "name": "Consume",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "消费祖先组件 `@Provide` 提供的状态变量（按变量名或别名匹配），双向同步。",
+    "snippet": "Consume",
+    "doc": "ui/state-management/arkts-provide-and-consume.md"
+  },
+  {
+    "name": "ObjectLink",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "接收 `@Observed` 装饰的类实例，观察其属性变化，用于嵌套对象/数组元素的双向同步。",
+    "detail": "不能本地初始化，也不能整体重新赋值。",
+    "snippet": "ObjectLink",
+    "doc": "ui/state-management/arkts-observed-and-objectlink.md"
+  },
+  {
+    "name": "Watch",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "监听状态变量的变化，值变化时同步调用指定的回调方法。",
+    "detail": "回调签名：`(changedPropertyName?: string) => void`。",
+    "snippet": "Watch('${1:onChange}')",
+    "doc": "ui/state-management/arkts-watch.md"
+  },
+  {
+    "name": "StorageLink",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "与 AppStorage 中对应 key 的属性建立双向同步。",
+    "snippet": "StorageLink('${1:key}')",
+    "doc": "ui/state-management/arkts-appstorage.md"
+  },
+  {
+    "name": "StorageProp",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "与 AppStorage 中对应 key 的属性建立单向同步（AppStorage → 组件）。",
+    "snippet": "StorageProp('${1:key}')",
+    "doc": "ui/state-management/arkts-appstorage.md"
+  },
+  {
+    "name": "LocalStorageLink",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "与页面级 LocalStorage 中对应 key 的属性建立双向同步。",
+    "snippet": "LocalStorageLink('${1:key}')",
+    "doc": "ui/state-management/arkts-localstorage.md"
+  },
+  {
+    "name": "LocalStorageProp",
+    "target": "member",
+    "group": "V1 状态管理",
+    "summary": "与页面级 LocalStorage 中对应 key 的属性建立单向同步。",
+    "snippet": "LocalStorageProp('${1:key}')",
+    "doc": "ui/state-management/arkts-localstorage.md"
+  },
+  {
+    "name": "BuilderParam",
+    "target": "member",
+    "group": "UI 构建",
+    "summary": "引用一个 `@Builder` 函数，由父组件传入，相当于“插槽”。",
+    "detail": "只有一个 `@BuilderParam` 时，可以使用尾随闭包 `Child() { ... }` 传入。",
+    "snippet": "BuilderParam",
+    "doc": "ui/state-management/arkts-builderparam.md"
+  },
+  {
+    "name": "Require",
+    "target": "member",
+    "group": "通用",
+    "summary": "校验该属性在构造组件时必须由父组件传入，否则编译报错。",
+    "detail": "可与 `@Prop`、`@State`、`@Provide`、`@BuilderParam`、`@Param` 以及普通变量组合使用。",
+    "snippet": "Require",
+    "doc": "ui/state-management/arkts-require.md"
+  },
+  {
+    "name": "Builder",
+    "target": "function",
+    "group": "UI 构建",
+    "summary": "自定义构建函数，轻量复用 UI 结构。可定义为全局函数或组件内方法。",
+    "detail": "按值传参时状态变化不刷新；传入单个对象字面量（按引用传递）时可感知变化。",
+    "snippet": "Builder",
+    "doc": "ui/state-management/arkts-builder.md"
+  },
+  {
+    "name": "LocalBuilder",
+    "target": "method",
+    "group": "UI 构建",
+    "summary": "组件内的局部构建函数，`this` 始终指向定义它的组件，避免 `@Builder` 传递后 `this` 指向变化的问题。",
+    "snippet": "LocalBuilder",
+    "doc": "ui/state-management/arkts-localBuilder.md"
+  },
+  {
+    "name": "Styles",
+    "target": "function",
+    "group": "UI 构建",
+    "summary": "定义可复用的通用属性/通用事件样式集合，不支持参数。",
+    "snippet": "Styles",
+    "doc": "ui/state-management/arkts-style.md"
+  },
+  {
+    "name": "Extend",
+    "target": "function",
+    "group": "UI 构建",
+    "summary": "扩展指定内置组件的私有属性和事件，仅可定义为全局函数，支持参数。",
+    "detail": "示例：`@Extend(Text) function fancy(size: number) { .fontSize(size) }`",
+    "snippet": "Extend(${1:Text})",
+    "doc": "ui/state-management/arkts-extend.md"
+  },
+  {
+    "name": "AnimatableExtend",
+    "target": "function",
+    "group": "UI 构建",
+    "summary": "定义可动画的属性方法，使不可动画的属性（如 `fontSize` 外的自定义数值）在动画中逐帧变化。",
+    "snippet": "AnimatableExtend(${1:Text})",
+    "doc": "ui/state-management/arkts-animatable-extend.md"
+  },
+  {
+    "name": "ObservedV2",
+    "target": "class",
+    "group": "V2 状态管理",
+    "summary": "装饰 class，配合 `@Trace` 实现属性级深度观察。",
+    "snippet": "ObservedV2",
+    "doc": "ui/state-management/arkts-new-observedV2-and-trace.md"
+  },
+  {
+    "name": "Trace",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "装饰 `@ObservedV2` 类中的属性，使其变化可被观察并触发 UI 刷新。",
+    "snippet": "Trace",
+    "doc": "ui/state-management/arkts-new-observedV2-and-trace.md"
+  },
+  {
+    "name": "Local",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "`@ComponentV2` 组件内部状态，不允许从外部初始化。",
+    "snippet": "Local",
+    "doc": "ui/state-management/arkts-new-local.md"
+  },
+  {
+    "name": "Param",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "`@ComponentV2` 组件的输入参数，父组件 → 子组件单向同步，子组件内不可直接修改。",
+    "snippet": "Param",
+    "doc": "ui/state-management/arkts-new-param.md"
+  },
+  {
+    "name": "Once",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "与 `@Param` 组合使用，只在初始化时同步一次父组件的值，之后可在本地修改。",
+    "snippet": "Once",
+    "doc": "ui/state-management/arkts-new-once.md"
+  },
+  {
+    "name": "Event",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "`@ComponentV2` 组件的输出回调，子组件通过它请求父组件修改 `@Param` 数据源。",
+    "snippet": "Event",
+    "doc": "ui/state-management/arkts-new-event.md"
+  },
+  {
+    "name": "Provider",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "V2 跨层级状态提供者，与后代组件中的 `@Consumer` 双向同步。",
+    "snippet": "Provider(${1})",
+    "doc": "ui/state-management/arkts-new-provider-and-consumer.md"
+  },
+  {
+    "name": "Consumer",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "V2 跨层级状态消费者，查找最近祖先的同名（或同别名）`@Provider`；找不到时使用本地默认值。",
+    "snippet": "Consumer(${1})",
+    "doc": "ui/state-management/arkts-new-provider-and-consumer.md"
+  },
+  {
+    "name": "Monitor",
+    "target": "method",
+    "group": "V2 状态管理",
+    "summary": "监听一个或多个状态变量（支持深层路径，如 `'info.name'`、`'arr.0'`）的变化。",
+    "detail": "回调参数为 `IMonitor`，可通过 `monitor.value(path)?.before / now` 获取变化前后的值。",
+    "snippet": "Monitor('${1:path}')",
+    "doc": "ui/state-management/arkts-new-monitor.md"
+  },
+  {
+    "name": "Computed",
+    "target": "method",
+    "group": "V2 状态管理",
+    "summary": "装饰 getter，声明计算属性：依赖变化时只重新计算一次，避免重复计算。",
+    "snippet": "Computed",
+    "doc": "ui/state-management/arkts-new-computed.md"
+  },
+  {
+    "name": "Type",
+    "target": "member",
+    "group": "V2 状态管理",
+    "summary": "标记 class 属性的类型，使 PersistenceV2 等序列化时不丢失类型信息。",
+    "snippet": "Type(${1:ClassName})",
+    "doc": "ui/state-management/arkts-new-type.md"
+  },
+  {
+    "name": "Sendable",
+    "target": "class",
+    "group": "并发",
+    "summary": "声明 Sendable 类（或函数），其实例可在并发实例（TaskPool / Worker）间按引用传递共享。",
+    "snippet": "Sendable",
+    "doc": "arkts-utils/arkts-sendable.md"
+  },
+  {
+    "name": "Concurrent",
+    "target": "function",
+    "group": "并发",
+    "summary": "声明可被 TaskPool 调度执行的并发函数。",
+    "snippet": "Concurrent",
+    "doc": "arkts-utils/taskpool-introduction.md"
+  }
+]
